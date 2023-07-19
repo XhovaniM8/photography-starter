@@ -10,17 +10,17 @@ import { Link } from "react-router-dom";
 const Header = () => {
   return (
     <header
-      className="bg-pink-200 fixed w-full px-[30px]
+      className="fixed w-full px-[30px]
   lg:px-[100px] z-30 h-[100px] lg:h-[140px] flex items-center"
     >
       <div className="flex flex-col lg:flex-row lg:items-center w-full justify-between">
         {/* Logo */}
-        <Link to={"/"}>
-          <img src={Logo} style={{ width: 400 }} alt="" />
+        <Link to={"/"} className="max-w-[200px]">
+          <img src={Logo} style={{ width: 300 }} alt="" />
         </Link>
 
         {/* Nav - initially hidden - show on desktop mode */}
-        <nav className="hidden lg:flex gap-x-12 font-semibold">
+        <nav className="hidden xl:flex gap-x-12 font-semibold">
           <Link
             to={"/Home"}
             className="text-[#697c6d] 
@@ -56,6 +56,11 @@ const Header = () => {
             Contact
           </Link>
         </nav>
+        {/* Socials */}
+        <Socials />
+
+        {/* Mobile Nav - initially shown - hide on desktop mode */}
+        <MobileNav />
       </div>
     </header>
   );
