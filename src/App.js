@@ -7,6 +7,8 @@ import { BrowserRouter as Router } from 'react-router-dom';
 // import motion
 import { motion } from 'framer-motion';
 
+// import masonry
+import { masonry } from "https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js";
 
 const App = () => {
   return (
